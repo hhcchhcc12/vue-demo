@@ -3,6 +3,7 @@
  */
 import Vue from 'vue'
 import VueRouter from "vue-router";
+import VueRescource from "vue-resource"
 
 // import App from './App.vue'
 import routes from './router.js'
@@ -16,19 +17,21 @@ import routes from './router.js'
 Vue.config.debug = true;//开启错误提示
 
 Vue.use(VueRouter);
+Vue.use(VueRescource);
 
 
 var router = new VueRouter({
-  routes: routes
+  routes: routes,
+  mode:'history'
 });
 
 var app = new Vue({
-  router: router,
+  router: router
   // render: function (h) {
   //   return h(App);
   // }
 }).$mount('#app');
 // router.start.
 // router.start(app, '#app')
-router.push('/main');
+router.push('/home');
 

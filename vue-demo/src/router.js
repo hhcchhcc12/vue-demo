@@ -3,7 +3,7 @@
  */
 import Favlist from './components/Favlist.vue'
 import Favlist2 from './components/Favlist2.vue'
-import Favlist3 from './components/Favlist2.vue'
+import Favlist3 from './components/Favlist3.vue'
 import App from './App.vue'
 
 var routes = [
@@ -12,10 +12,11 @@ var routes = [
       component: App,
       children: [
         {path: '/home', component: Favlist},
-      {path: '/favorite', component: Favlist2},
-      {path: '/me', component: Favlist3}],
+        {path: '/favorite/:businessId', component: Favlist2},
+        {path: '/me', component: Favlist3}
+      ]
     }
   ]
-  ;
+
 
 export default routes;

@@ -5,7 +5,7 @@
         <span class="icon icon-home"></span>
         <span class="tab-label">首页</span>
       </router-link>
-      <router-link class="tab-item" to= "/favorite" data-transition='slide-in'>
+      <router-link class="tab-item"  :to= "msg" data-transition='slide-in'>
         <span class="icon icon-star"></span>
         <span class="tab-label">收藏</span>
       </router-link>
@@ -30,6 +30,12 @@
 </style>
 
 <script >
-
+export default{
+    data:function(){
+        return{
+            msg:"/favorite/xxxx"
+        }
+    }
+}
 </script>
 
